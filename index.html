@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Parks Biodiversity Map</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        
+        h2, h4{
+            text-align: center;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        #map {
+            flex: 1;
+            margin: 0 10px;
+            /* border: 2px solid #666; Thicker and more prominent border */
+            /* border-radius: 10px; Rounded corners */
+            height: 950px; /* Adjust height as needed */
+        }
+
+        #feedback {
+            width: calc(100% - 40px); /* Account for padding */
+            margin: 10px 20px;
+            padding: 5px;
+            border: 2px solid #666;
+            border-radius: 10px;
+        }
+
+        svg {
+            width: 125%;
+            height: 100%;
+            border: 2px solid #666;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: 120px;
+            height: 50px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: white;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Homework 5: Custom Visualization Design</h2>
+    <h4>Kanishk Goswami - kgoswam1@asu.edu</h4>
+    <h2><b><u>The Wild Spectrum: Species Varieties in U.S. National Parks</u></b></h2>
+    <div id="container">
+        <div id="map"></div>
+        <div id="details"></div>
+    </div>
+    <div id="description" style="padding: 20px; margin-top: 20px; margin-left: 30px; border: 2px solid black; border-radius: 10px;">
+        <p>This visualization artfully merges a stacked bar chart with an integrated treemap to delve into the rich biodiversity found 
+            across U.S. national parks, each categorized by state. Each bar in the chart symbolizes a different national park, 
+            positioned along the y-axis by state. Nested within these bars, the treemap segments further detail the data, with each 
+            section highlighting a specific species category and its prevalence within that park. This thoughtful design enables 
+            the museum exhibit viewers to effortlessly gain insights into both the broad biodiversity of the parks and the intricate makeup of species 
+            that each park hosts. Link to dataset: <a href=https://rb.gy/uchffa> here</a></p>
+        <p>
+            <b><u>Marks: </u></b><br>
+            <t>The primary marks used are the lines (rectangular bars) of the stacked bar chart and the smaller rectangles (cells) of the 
+            treemap within each bar.</t><br><br>
+            <b><u>Channels: </u></b><br>
+            • <u>Position:</u> The vertical position of each bar correlates to the state, providing geographical context.<br>
+            • <u>Length:</u> The length of each bar indicates the total species count in each national park, allowing for comparisons 
+            across parks. <br>
+            • <u>Color:</u> Colors in the treemap cells differentiate species categories, aiding in distinguishing between them 
+            visually. <br>
+            • <u>Area:</u> The area of each treemap cell reflects the count of the species within that category, giving a sense 
+            of proportion at a glance. <br><br>
+
+            <b><u>Interactions:</u></b><br>
+            • <u>Tooltip:</u> Hovering over any cell in the treemap displays a tooltip with detailed information about the park, state, 
+            species category, and count, enriching the data exploration experience with on-demand details.<br>
+            • <u>Legend:</u> A color-coded legend aids in interpreting the colors used within the treemap, enhancing understandability. <br><br>
+
+            This "Custom Visualization" is categorized as <b>Combinatorial</b> because it blends features from both stacked bar 
+            charts and treemaps into a unified display. Instead of simply showcasing a traditional stacked bar chart or an isolated 
+            treemap, it also incorporates a treemap within each segment of the bar chart. This integrated approach enhances 
+            the depth and richness of the data presentation, offering a more dynamic and informative visual experience.
+        </p>
+
+    </div>
+    <div id="tooltip" style="position: absolute; opacity: 0; pointer-events: none; background-color: white; border: 1px solid #000; padding: 10px; border-radius: 5px;">
+    </div>
+    
+    <script src="kgoswam1.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+Park Code,Park Name,State,Acres,Latitude,Longitude,Species count
+DENA,Denali National Park and Preserve,AK,3372402,63.33,-150.5,1320
+GAAR,Gates Of The Arctic National Park and Preserve,AK,7523898,67.78,-153.3,1353
+GLBA,Glacier Bay National Park and Preserve,AK,3224840,58.5,-137,1957
+KATM,Katmai National Park and Preserve,AK,3674530,58.5,-155,1225
+KEFJ,Kenai Fjords National Park,AK,669983,59.92,-149.65,1057
+KOVA,Kobuk Valley National Park,AK,1750717,67.55,-159.28,1025
+LACL,Lake Clark National Park and Preserve,AK,2619733,60.97,-153.42,2007
+WRST,Wrangell - St Elias National Park and Preserve,AK,8323148,61,-142,1796
+HOSP,Hot Springs National Park,AR,5550,34.51,-93.05,1950
+GRCA,Grand Canyon National Park,AZ,1217403,36.06,-112.14,2621
+PEFO,Petrified Forest National Park,AZ,93533,35.07,-109.78,853
+SAGU,Saguaro National Park,AZ,91440,32.25,-110.5,1834
+CHIS,Channel Islands National Park,CA,249561,34.01,-119.42,1885
+JOTR,Joshua Tree National Park,CA,789745,33.79,-115.9,2294
+LAVO,Lassen Volcanic National Park,CA,106372,40.49,-121.51,1797
+PINN,Pinnacles National Park,CA,26606,36.48,-121.16,1416
+REDW,Redwood National Park,CA,112512,41.3,-124,6310
+SEKI,Sequoia and Kings Canyon National Parks,CA,865952,36.43,-118.68,1995
+YOSE,Yosemite National Park,CA,761266,37.83,-119.5,2088
+DEVA,Death Valley National Park,"CA, NV",4740912,36.24,-116.82,4439
+BLCA,Black Canyon of the Gunnison National Park,CO,32950,38.57,-107.72,1106
+GRSA,Great Sand Dunes National Park and Preserve,CO,42984,37.73,-105.51,952
+MEVE,Mesa Verde National Park,CO,52122,37.18,-108.49,1243
+ROMO,Rocky Mountain National Park,CO,265828,40.4,-105.58,3152
+BISC,Biscayne National Park,FL,172924,25.65,-80.08,1726
+DRTO,Dry Tortugas National Park,FL,64701,24.63,-82.87,848
+EVER,Everglades National Park,FL,1508538,25.32,-80.93,2084
+HALE,Haleakala National Park,HI,29094,20.72,-156.17,2580
+HAVO,Hawaii Volcanoes National Park,HI,323431,19.38,-155.2,3298
+MACA,Mammoth Cave National Park,KY,52830,37.18,-86.1,2499
+ACAD,Acadia National Park,ME,47390,44.35,-68.21,1709
+ISRO,Isle Royale National Park,MI,571790,48.1,-88.55,1397
+VOYA,Voyageurs National Park,MN,218200,48.5,-92.88,1453
+GLAC,Glacier National Park,MT,1013572,48.8,-114,2556
+THRO,Theodore Roosevelt National Park,ND,70447,46.97,-103.45,1165
+CAVE,Carlsbad Caverns National Park,NM,46766,32.17,-104.44,1536
+GRBA,Great Basin National Park,NV,77180,38.98,-114.3,2653
+CUVA,Cuyahoga Valley National Park,OH,32950,41.24,-81.55,1941
+CRLA,Crater Lake National Park,OR,183224,42.94,-122.1,3760
+CONG,Congaree National Park,SC,26546,33.78,-80.78,2321
+BADL,Badlands National Park,SD,242756,43.75,-102.5,1389
+WICA,Wind Cave National Park,SD,28295,43.57,-103.48,1395
+GRSM,Great Smoky Mountains National Park,"TN, NC",521490,35.68,-83.53,6623
+BIBE,Big Bend National Park,TX,801163,29.25,-103.25,2269
+GUMO,Guadalupe Mountains National Park,TX,86416,31.92,-104.87,1746
+ARCH,Arches National Park,UT,76519,38.68,-109.57,1048
+BRCA,Bryce Canyon National Park,UT,35835,37.57,-112.18,1286
+CANY,Canyonlands National Park,UT,337598,38.2,-109.93,1223
+CARE,Capitol Reef National Park,UT,241904,38.2,-111.17,1566
+ZION,Zion National Park,UT,146598,37.3,-113.05,1796
+SHEN,Shenandoah National Park,VA,199045,38.53,-78.35,4655
+MORA,Mount Rainier National Park,WA,235625,46.85,-121.75,1743
+NOCA,North Cascades National Park,WA,504781,48.7,-121.2,3363
+OLYM,Olympic National Park,WA,922651,47.97,-123.5,1948
+GRTE,Grand Teton National Park,WY,309995,43.73,-110.8,2030
+YELL,Yellowstone National Park,"WY, MT, ID",2219791,44.6,-110.5,3966
