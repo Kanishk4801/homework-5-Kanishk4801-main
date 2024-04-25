@@ -11,13 +11,6 @@ async function create_bar_chart()
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
-    
-    svg.append("image")
-        .attr("xlink:href", "images/Background.png")
-        .attr("width", width + margin.left + margin.right+55)
-        .attr("height", height + margin.top + margin.bottom+40)
-        .attr("x", -300)
-        .attr("y", -20);
 
     const states = ['AZ', 'CO', 'KY', 'WA', 'TX','AK', 'FL', 'UT'];
     const parks_filtered = park_data.filter(park => states.includes(park.State));
@@ -45,6 +38,9 @@ async function create_bar_chart()
                 }))
             }))
         }));
+        state_data.forEach(item => console.log(item.state,item.parks));
+        
+
         const scale_y = d3.scaleBand()
             .domain(states)
             .range([0, height])
@@ -60,14 +56,6 @@ async function create_bar_chart()
         .range(color_list);
 
     const tooltip = d3.select("#tooltip");
-
-    const img_category = svg.append("image")
-    .attr("x", 1000) 
-    .attr("y", 30) 
-    .attr("width", 350)
-    .attr("height", 350)
-    .style("opacity", 0); 
-
     state_data.forEach(state => {
         let x0 = 0;
         const state_group = svg.append("g").attr("transform", `translate(0, ${scale_y(state.state)})`);
@@ -98,9 +86,6 @@ async function create_bar_chart()
                            .html(`<strong>Park:</strong> ${park.name}<br><strong>State:</strong> ${state.state}<br><strong>Category: </strong>${d.data.category}<br><strong>Count:</strong> ${d.value}`)
                            .style("left", `${event.pageX + 10}px`)
                            .style("top", `${event.pageY + 10}px`);
-                    img_category.attr("xlink:href", get_url(d.data.category))
-                                 .style("opacity", 1)
-                                 .raise();
                 })
                 .on("mousemove", (event, d) => {
                     tooltip.style("left", `${event.pageX + 10}px`)
@@ -108,7 +93,6 @@ async function create_bar_chart()
                 })
                 .on("mouseout", () => {
                     tooltip.style("opacity", 0);
-                    img_category.style("opacity", 0);
                 });
 
             x0 += bar_width+2.5;
@@ -163,18 +147,18 @@ async function create_bar_chart()
             .attr("ry", 15)
             .attr("stroke", "black");
     });
-    const axis_x = svg.append("g")
+    const xAxis = svg.append("g")
         .attr("transform", `translate(0, ${height})`)
         .call(d3.axisBottom(scale_x));
     
-    axis_x.selectAll("text")
+    xAxis.selectAll("text")
         .style("font-size", "16px")  
         .style("font-weight", "bold");  
 
-    const axis_y = svg.append("g")
+    const yAxis = svg.append("g")
         .call(d3.axisLeft(scale_y));
 
-    axis_y.selectAll("text")
+    yAxis.selectAll("text")
         .style("font-size", "16px")  
         .style("font-weight", "bold");  
 
@@ -193,26 +177,5 @@ async function create_bar_chart()
         .style("text-anchor", "middle")
         .style("font-weight", "bold")
         .text("Number of Species");
-}
-function get_url(species) 
-{
-    const img_list = 
-    {
-        'Mammal': 'Mammal.png',
-        'Bird': 'Bird.png',
-        'Reptile': 'Reptile.png',
-        'Fish': 'Fish.png',
-        'Amphibian': 'Amphibian.png',
-        'Vascular Plant': 'VascularPlant.png',
-        'Spider/Scorpion': 'Spider_Scorpion.png',
-        'Insect': 'Insect.png',
-        'Invertebrate': 'Invertebrate.png',
-        'Fungi': 'Fungi.png',
-        'Nonvascular Plant': 'NonvascularPlant.png',
-        'Crab/Lobster/Shrimp': 'Crab_Lobster_Shrimp.png',
-        'Slug/Snail': 'Slug_Snail.png',
-        'Algae': 'Algae.png'
-    };
-    return `images/${img_list[species]}`;
 }
 create_bar_chart();

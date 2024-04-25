@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Parks Biodiversity Map</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        
-        h2, h4{
+        h2, h4 {
             text-align: center;
+            font-family: 'Lexend', sans-serif;
         }
-        
+    
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-image: url('images/Background.png'); /* Set the background image */
+            background-size: cover; /* Cover the entire area */
+            background-position: center;
         }
         #container {
             display: flex;
@@ -23,15 +27,13 @@
             padding: 20px;
             margin: 10px;
         }
-
+    
         #map {
             flex: 1;
             margin: 0 10px;
-            /* border: 2px solid #666; Thicker and more prominent border */
-            /* border-radius: 10px; Rounded corners */
             height: 950px; /* Adjust height as needed */
         }
-
+    
         #feedback {
             width: calc(100% - 40px); /* Account for padding */
             margin: 10px 20px;
@@ -39,15 +41,15 @@
             border: 2px solid #666;
             border-radius: 10px;
         }
-
+    
         svg {
-            width: 125%;
+            width: 1450px;
             height: 100%;
             border: 2px solid #666;
             border-radius: 10px;
             background-color: #f9f9f9;
         }
-
+    
         .tooltip {
             position: absolute;
             text-align: center;
@@ -60,6 +62,15 @@
             border-radius: 8px;
             pointer-events: none;
             opacity: 0;
+        }
+    
+        #description {
+            font-family: 'Lexend', sans-serif; /* Apply Lexend font */
+            padding: 20px;
+            margin-top: 20px;
+            margin-left: 30px;
+            border: 2px solid black;
+            border-radius: 10px;
         }
     </style>
 </head>
